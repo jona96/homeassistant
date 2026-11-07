@@ -167,7 +167,7 @@ variables:
     {% if default_scene == "" %}
       {{ scenes }}
     {% else %}
-      {{ [default_scene] + scenes | unique | list }}
+      {{ ([default_scene] + scenes) | unique | list }}
     {% endif %}
   all_entities: >
     {% set entities = namespace(list=[]) %}
